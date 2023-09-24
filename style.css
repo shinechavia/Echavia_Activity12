@@ -118,7 +118,7 @@ body {
 /* Styles for the input element */
 .input {
     width: 100%;
-    max-width: 200px; /* Adjust the maximum width for larger screens */
+    max-width: 220px; /* Adjust the maximum width for larger screens */
     height: 30px;
     padding: 5px 5px 5px 10px;
     border-radius: 10px;
