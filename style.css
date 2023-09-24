@@ -1,27 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+/* Common styles for all screen sizes */
 body {
-    font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
-    color: white; /* Text color */
-    font-size: 12px;
-    background-image: url(https://images4.alphacoders.com/841/841629.jpg);
-    background-size: 100% auto; /* Adjust the width as needed */
-    background-repeat: no-repeat;
-    color: white;
-}
-
-p {
     font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px; /* Increase the base font size for better readability */
+    background-image: url(https://images4.alphacoders.com/841/841629.jpg);
+    background-size: cover; /* Use cover to fill the entire background */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    margin: 0; /* Remove default margin */
 }
 
-/* Style the outer container to center and make it transparent */
 .center-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center both vertically and horizontally */
+    align-items: center;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    position: relative; /* Add relative positioning */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for the footer */
+}
+
+/* Style the background */
+.background {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for the footer */
+    width: 100%; /* Occupy the whole screen width */
+    height: 100%; /* Occupy the whole screen height */
+    position: fixed; /* Position the background fixed to cover the entire viewport */
+    top: 0;
+    left: 0;
+}
+
+/* Styles for the input element */
+.input {
+    width: 100%;
+    max-width: 270px; /* Adjust the maximum width for larger screens */
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
 }
 
 /* Style the inner container (your to-do list) */
@@ -30,79 +49,61 @@ p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(145, 128, 209, 0.2); /* Add a subtle shadow */
-    width: 30%;
+    width: 100%; /* Adjust width for mobile and tablet screens */
+    max-width: 400px; /* Limit maximum width for larger screens */
+    position: relative; /* Add relative positioning */
+    z-index: 1; /* Place the to-do list above the background */
 }
 
+/* Styles for the "Add Task" button */
+#addTask {
+    background: linear-gradient(to bottom, #692e77, #cf6a26);
+    color: white;
+    width: 24%;
+    padding: 12px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px; /* Increase the font size for better readability */
+    margin-top: 10px;
+}
 
 .done {
     text-decoration: line-through;
 }
 
-#todoInput {
-    border-radius: 5px; /* Apply a border radius of 5px */
-    /* Add any other styles you want for this input element */
-    border: 1px solid #9a99da; /* Example border style */
-    transition: border-color 0.3s; /* Add a smooth transition for the border color */
-    max-width: 70%;
-
-}
-
-#todoInput:hover {
-    border-color: purple; /* Change the border color to purple on hover */
-}
-
-.input {
+/* Styles for the task list */
+#taskList {
     width: 100%;
-    max-width: 200px;
-    height: 10px;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1.5px solid lightgrey;
-    outline: none;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    box-shadow: 0px 0px 20px -18px;
-  }
-  
-  .input:hover {
-    border: 2px solid lightgrey;
-    box-shadow: 0px 0px 20px -17px;
-  }
-  
-  .input:active {
-    transform: scale(0.95);
-  }
-  
-  .input:focus {
-    border: 2px solid #43ce7d;
-  }
-
-  #addTask {
-    background: linear-gradient(to bottom, #692e77, #cf6a26); /* Gradient background */
-    color: white; /* Text color */
-    padding: 10px 16px; /* Slightly smaller padding */
-    border: none; /* Remove the default button border */
-    border-radius: 5px; /* Add a border radius for rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-    font-size: 14px; /* Slightly smaller font size */
-    margin-left: 25px; /* Add a left margin */
-    color: white;
+    list-style-type: none;
+    padding: 0;
 }
 
-#addTask::before {
-    content: "+"; /* Insert the "+" symbol as content before the button text */
-    padding-right: 1px; /* Slightly smaller space between "+" symbol and text */
-}
-
-#addTask:hover {
-    background: linear-gradient(to bottom, #cf6a26, #77452e); /* Reverse gradient on hover */
+#taskList li {
+    margin-bottom: 10px;
 }
 
 footer {
-    color: #fff; /* Adjust the text color as needed */
     text-align: center;
-    padding: 10px;
-    position: sticky;
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    font-size: 13px;
 }
 
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+    #app {
+        width: 90%; /* Adjust width for tablet screens */
+    }
+}
 
+/* Media query for mobile screens */
+@media (max-width: 576px) {
+    #app {
+        width: 95%; /* Adjust width for mobile screens */
+    }
+}
