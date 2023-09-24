@@ -35,7 +35,7 @@ body {
 .input {
     width: 100%;
     max-width: 250px; /* Adjust the maximum width for larger screens */
-    height: 30px;
+    height: 35px;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     border: 1.5px solid lightgrey;
@@ -149,7 +149,7 @@ body {
 #addTask {
     background: linear-gradient(to bottom, #692e77, #cf6a26);
     color: white;
-    width: 24%;
+    width: 22%;
     padding: 12px 10px;
     margin-left: 10px;
     border: none;
@@ -188,7 +188,7 @@ body {
 #addTask {
     background: linear-gradient(to bottom, #692e77, #cf6a26);
     color: white;
-    width: 24%;
+    width: 22%;
     padding: 12px 10px;
     margin-left: 10px;
     border: none;
@@ -196,7 +196,7 @@ body {
     cursor: pointer;
     font-size: 15px; /* Increase the font size for better readability */
     margin-top: 10px;
-}
+    }
 }
 
 
