@@ -115,9 +115,37 @@ body {
     }
 }
 
+/* Styles for the input element */
+.input {
+    width: 100%;
+    max-width: 200px; /* Adjust the maximum width for larger screens */
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+}
+
 /* Media query for mobile screens */
 @media (max-width: 576px) {
     #app {
         width: 95%; /* Adjust width for mobile screens */
     }
+
+    /* Styles for the input element */
+.input {
+    width: 100%;
+    max-width: 200px; /* Adjust the maximum width for larger screens */
+    height: 30px;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+    }
 }
+
+
