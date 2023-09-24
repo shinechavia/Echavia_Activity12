@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the Roboto font */
+    color: white; /* Text color */
+    font-size: 12px;
+    background-image: url(https://images4.alphacoders.com/841/841629.jpg);
+    background-size: 100% auto; /* Adjust the width as needed */
+    background-repeat: no-repeat;
+    color: white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style the outer container to center and make it transparent */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+}
+
+/* Style the inner container (your to-do list) */
+#app {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background with 50% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(145, 128, 209, 0.2); /* Add a subtle shadow */
+    width: 30%;
+}
+
+
+.done {
+    text-decoration: line-through;
+}
+
+#todoInput {
+    border-radius: 5px; /* Apply a border radius of 5px */
+    /* Add any other styles you want for this input element */
+    border: 1px solid #9a99da; /* Example border style */
+    transition: border-color 0.3s; /* Add a smooth transition for the border color */
+    max-width: 70%;
+
+}
+
+#todoInput:hover {
+    border-color: purple; /* Change the border color to purple on hover */
+}
+
+.input {
+    width: 100%;
+    max-width: 200px;
+    height: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    border: 2px solid #43ce7d;
+  }
+
+  #addTask {
+    background: linear-gradient(to bottom, #692e77, #cf6a26); /* Gradient background */
+    color: white; /* Text color */
+    padding: 10px 16px; /* Slightly smaller padding */
+    border: none; /* Remove the default button border */
+    border-radius: 5px; /* Add a border radius for rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 14px; /* Slightly smaller font size */
+    margin-left: 25px; /* Add a left margin */
+    color: white;
+}
+
+#addTask::before {
+    content: "+"; /* Insert the "+" symbol as content before the button text */
+    padding-right: 1px; /* Slightly smaller space between "+" symbol and text */
+}
+
+#addTask:hover {
+    background: linear-gradient(to bottom, #cf6a26, #77452e); /* Reverse gradient on hover */
+}
+
+footer {
+    color: #fff; /* Adjust the text color as needed */
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+
