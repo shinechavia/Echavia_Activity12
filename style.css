@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* Keep the background fixed while scrolling */
     margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .center-container {
@@ -33,7 +34,7 @@ body {
 /* Styles for the input element */
 .input {
     width: 100%;
-    max-width: 270px; /* Adjust the maximum width for larger screens */
+    max-width: 250px; /* Adjust the maximum width for larger screens */
     height: 30px;
     padding: 5px 5px 5px 10px;
     border-radius: 10px;
@@ -50,7 +51,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(145, 128, 209, 0.2); /* Add a subtle shadow */
     width: 100%; /* Adjust width for mobile and tablet screens */
-    max-width: 400px; /* Limit maximum width for larger screens */
+    max-width: 380px; /* Limit maximum width for larger screens */
     position: relative; /* Add relative positioning */
     z-index: 1; /* Place the to-do list above the background */
 }
@@ -96,6 +97,19 @@ footer {
 
 /* Media query for tablet screens */
 @media (max-width: 768px) {
+    /* Common styles for all screen sizes */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px; /* Increase the base font size for better readability */
+    background-image: url(https://images4.alphacoders.com/841/841629.jpg);
+    background-size: cover; /* Use cover to fill the entire background */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
     #app {
         width: 90%; /* Adjust width for tablet screens */
     }
