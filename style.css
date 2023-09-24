@@ -145,6 +145,20 @@ body {
         width: 95%; /* Adjust width for mobile screens */
     }
 
+    /* Styles for the "Add Task" button */
+#addTask {
+    background: linear-gradient(to bottom, #692e77, #cf6a26);
+    color: white;
+    width: 24%;
+    padding: 12px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px; /* Increase the font size for better readability */
+    margin-top: 10px;
+}
+
     /* Styles for the input element */
 .input {
     width: 100%;
@@ -169,6 +183,20 @@ body {
     position: relative; /* Add relative positioning */
     z-index: 1; /* Place the to-do list above the background */
     }
+
+    /* Styles for the "Add Task" button */
+#addTask {
+    background: linear-gradient(to bottom, #692e77, #cf6a26);
+    color: white;
+    width: 24%;
+    padding: 12px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px; /* Increase the font size for better readability */
+    margin-top: 10px;
+}
 }
 
 
